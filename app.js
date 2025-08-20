@@ -1,15 +1,8 @@
-let paragraphElement = document.querySelector("p");
-
-function changeParagraphText() {
-  paragraphElement.textContent = "Clicked!";
-}
-paragraphElement.addEventListener("click", changeParagraphText);
-
 let inputElement = document.querySelector("input");
+let remainingText;
 
 function logInputValue(event) {
-  // console.log(inputElement.value);
-  console.log(event.target.value);
+  remainingText = 60 - event.target.value.length;
 }
 
 inputElement.addEventListener("input", logInputValue);
