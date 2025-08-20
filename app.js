@@ -7,8 +7,9 @@ paragraphElement.addEventListener("click", changeParagraphText);
 
 let inputElement = document.querySelector("input");
 
-function logInputValue() {
-  console.log(inputElement.value);
+function logInputValue(event) {
+  // console.log(inputElement.value);
+  console.log(event.target.value);
 }
 
 inputElement.addEventListener("input", logInputValue);
