@@ -30,10 +30,10 @@ button:hover {
   border-color: rgb(221, 199, 5);
 }
 
-p.removed {
+.striken {
   text-decoration: line-through;
 }
 
-p.blue {
-  background-color: rgb(34, 5, 221);
+.blue {
+  background-color: rgb(164, 152, 242);
 }

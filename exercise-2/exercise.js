@@ -30,14 +30,18 @@ const thirdParagraph = document.querySelectorAll("p")[2];
 console.log(firstParagraph.textContent);
 console.log(thirdParagraph.textContent);
 
+const firstParagraphElement = document.body.children[2].children[1];
+const thirdParagraphElement = document.body.children[2].children[3];
+console.log(firstParagraphElement.textContent);
+console.log(thirdParagraphElement.textContent);
+
 // 4) Change the functions from (2) such that:
 //    - The first button removes the third paragraph (i.e. the <p> prior to it)
 //    - The second button changes the background color of the first paragraph to blue
 
-// firstButton.addEventListener("click", function () {
-//   firstParagraph.textContent = "";
-// });
-
+firstButton.addEventListener("click", function () {
+  firstParagraph.remove();
+});
 secondButton.addEventListener("click", function () {
   thirdParagraph.style.backgroundColor = "blue";
 });
@@ -46,9 +50,8 @@ secondButton.addEventListener("click", function () {
 //    Note: You'll have to add those classes to the styles.css file first!
 
 firstButton.addEventListener("click", function () {
-  firstParagraph.classList.add("removed");
+  firstParagraph.classList.add("striken");
 });
-
 secondButton.addEventListener("click", function () {
   thirdParagraph.classList.add("blue");
 });
