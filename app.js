@@ -7,10 +7,10 @@
 
 // inputElement.addEventListener("input", logInputValue);
 
-let productNameInputElement = document.getElementById("product-name");
-let remainingTextElement = document.getElementById("remaining-chars");
+const productNameInputElement = document.getElementById("product-name");
+const remainingTextElement = document.getElementById("remaining-chars");
 
-let maxAllowedChars = productNameInputElement.maxLength;
+const maxAllowedChars = productNameInputElement.maxLength;
 
 function updateRemainingCharacters(event) {
   const remainingTextChars = maxAllowedChars - event.target.value.length;
