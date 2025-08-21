@@ -19,8 +19,11 @@ form {
 }
 
 input {
+  background-color: rgb(250, 245, 118);
   margin: 10px 10px 0 0;
   border-radius: 6px;
+  width: 400px;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 input:focus {
