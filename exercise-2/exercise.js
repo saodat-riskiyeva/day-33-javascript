@@ -11,8 +11,13 @@ const secondButton = document.getElementById("add-btn");
 //    The functions should "console.dir()" the clicked buttons.
 //    - Output the first button by using the variable in which it's stored
 //    - Output the second button WITHOUT using the variable in which it's stored
-console.dir(firstButton);
-console.dir(document.getElementById("add-btn"));
+
+firstButton.addEventListener("click", function () {
+  console.dir(firstButton);
+});
+secondButton.addEventListener("click", function (event) {
+  console.dir(event.target);
+});
 
 // 3) Now select and store the paragraphs mentioned in the text you see on the page
 //    (first and third paragraph)
