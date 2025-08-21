@@ -9,6 +9,19 @@
   </head>
   <body>
     <form>
+      <div class="control">
+        <label for="product-name">Product Name</label>
+        <input
+          type="text"
+          id="product-name"
+          name="product-name"
+          maxlength="60"
+        />
+        <span id="charcount"> <span id="remaining-chars">60</span>/60 </span>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <form>
       <p>Product Name</p>
       <input type="text" />
       <span>XX/60</span>

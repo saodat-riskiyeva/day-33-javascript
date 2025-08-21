@@ -1,7 +1,6 @@
 body {
-  background-color: rgb(14, 13, 13);
-  display: flex;
-  justify-content: center;
+  font-family: sans-serif;
+  background-color: rgb(36, 35, 30);
 }
 
 P {
@@ -9,36 +8,65 @@ P {
   padding: 0;
 }
 form {
-  display: block;
-  justify-content: center;
-  background-color: rgb(248, 241, 143);
-  width: 800px;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 50rem;
+  box=shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  font-weight: 600;
-  padding: 15px 0 10px 20px;
+  padding: 1rem;
+  background-color: rgb(246, 245, 201);
+}
+
+.control {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 input {
-  background-color: rgb(250, 245, 118);
-  margin: 10px 10px 0 0;
-  border-radius: 6px;
-  width: 400px;
-  border: 1px solid rgb(0, 0, 0);
+  font: inherit;
+  font-size: 1.15rem;
+  padding: 0.35rem;
+  border: 1px solid rgb(204, 204, 204);
+  background-color: rgb(252, 249, 233);
+  color: rgb(53, 51, 39);
+  width: 25rem;
+  border-radius: 4px;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 input:focus {
-  outline: none;
-  border: 2px solid rgb(0, 0, 0);
-  background-color: rgb(236, 233, 20);
+  background-color: rgb(253, 245, 196);
 }
 
 button {
-  display: block;
-  justify-content: left;
-  margin: 10px 0;
-  background-color: rgb(163, 187, 7);
-  border-radius: 6px;
-  border: none;
-  width: 80px;
-  height: 30px;
+  font: inherit;
+  background-color: rgb(209, 184, 23);
+  border: 1px solid rgb(209, 184, 23);
+  color: rgb(44, 43, 36);
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  cusor: pointer;
+}
+
+button:hover {
+  background-color: rgb(209, 197, 23);
+  border-color: rgb(209, 197, 23);
+}
+
+#charcount {
+  color: rgb(105, 101, 75);
+}
+
+input.warning {
+  background-color: rgb(248, 191, 145);
+}
+
+#remaining-chars.warning {
+  color: rgb(211, 109, 26);
 }
