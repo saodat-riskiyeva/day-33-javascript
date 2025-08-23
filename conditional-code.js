@@ -30,3 +30,12 @@ const users = ["Max", "John", "Jane", "Alice", "Bob"];
 for (const user of users) {
   console.log(user);
 }
+
+const useInfo = {
+  name: "Max",
+  age: 30,
+  isAdmin: true,
+};
+for (const key in useInfo) {
+  console.log(`${key}: ${useInfo[key]}`);
+}
