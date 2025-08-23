@@ -40,8 +40,9 @@ for (const key in useInfo) {
   console.log(`${key}: ${useInfo[key]}`);
 }
 
-const isOk = false;
+let i = 7;
 
-while (isOk) {
-  console.log("It is OK");
+while (i > 0) {
+  console.log(`${i}. It is OK`);
+  i--;
 }
