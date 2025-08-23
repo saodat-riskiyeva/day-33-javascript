@@ -24,3 +24,9 @@ productNameInputElement.addEventListener("input", updateRemainingCharacters);
 for (let i = 0; i < 10; i = i + 2) {
   console.log(i);
 }
+
+const users = ["Max", "John", "Jane", "Alice", "Bob"];
+
+for (const user of users) {
+  console.log(user);
+}
