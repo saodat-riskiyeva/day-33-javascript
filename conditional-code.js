@@ -39,3 +39,9 @@ const useInfo = {
 for (const key in useInfo) {
   console.log(`${key}: ${useInfo[key]}`);
 }
+
+const isOk = false;
+
+while (isOk) {
+  console.log("It is OK");
+}
