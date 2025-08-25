@@ -29,3 +29,27 @@ function highlightLinks() {
 }
 
 highlightButton.addEventListener("click", highlightLinks);
+
+// Display user data
+const dummyData = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+};
+
+const userDataDisplayButton = document.querySelector("#user-data button");
+
+function showUserData() {
+  const outDataElement = document.getElementById("output-user-data");
+
+  outDataElement.innerHTML = "";
+
+  for (const key in dummyData) {
+    const newUserDataListItem = document.createElement("li");
+    const outputText = key.toUpperCase() + ": " + dummyData[key];
+    newUserDataListItem.textContent = outputText;
+    outDataElement.appendChild(newUserDataListItem);
+  }
+}
+
+document.addEventListener("click", showUserData);
