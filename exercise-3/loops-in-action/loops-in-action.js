@@ -53,3 +53,43 @@ function showUserData() {
 }
 
 document.addEventListener("click", showUserData);
+
+// Statistics
+const rollDiceButton = document.querySelector("#statistics button");
+
+function rollDice() {
+  return Math.floor(Math.random() * 6) + 1;
+}
+
+function deriveNumberOfDiceRolls() {
+  const targetNumberInput = document.getElementById("user-target-number");
+  const diceRollsListelement = document.getElementById("dice-rolls");
+  const enteredNumber = targetNumberInput.valueAsNumber;
+
+  diceRollsListelement.innerHTML = "";
+
+  let hasRolledTargetNumber = false;
+  let numberOfRolls = 0;
+
+  while (!hasRolledTargetNumber) {
+    const rolledNumber = rollDice();
+    numberOfRolls++;
+
+    const newRollListItem = document.createElement("li");
+    newRollListItem.textContent = "Roll " + numberOfRolls + ": " + rolledNumber;
+    diceRollsListelement.appendChild(newRollListItem);
+
+    hasRolledTargetNumber = rolledNumber === enteredNumber;
+    // if (rolledNumber === enteredNumber) {
+    //   hasRolledTargetNumber = true;
+    // }
+  }
+
+  const outputTotalRolls = document.getElementById("output-total-rolls");
+  const outputTargetNumber = document.getElementById("output-target-number");
+
+  outputTargetNumber.textContent = enteredNumber;
+  outputTotalRolls.textContent = numberOfRolls;
+}
+
+rollDiceButton.addEventListener("click", deriveNumberOfDiceRolls);
